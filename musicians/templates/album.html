@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1 class="text-center">{{type}} Album</h1>
+<form method="post" action="" class="w-50 m-auto">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <div class="d-flex justify-content-center align-items-center">
+        <button type="submit" class="btn btn-primary">{{type}} Album</button>
+    </div>
+</form>
+{% endblock %}
